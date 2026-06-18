@@ -1,0 +1,295 @@
+================================================================================
+TASK SUBMISSION: MySQL CRUD Operations & Python Basics
+File Name: task_submission.txt
+Submitted by: Balaji Krishnamoorthy
+Submission Date: 18/06/2026
+================================================================================
+
+--------------------------------------------------------------------------------
+PART 1: MySQL – CRUD Operations
+--------------------------------------------------------------------------------
+
+-- 1. Create a database named college_db.
+CREATE DATABASE college_db;
+
+-- 2. Select the created database.
+USE college_db;
+
+-- 3. Create a table named students with AUTO_INCREMENT PRIMARY KEY.
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(100),
+    age INT,
+    city VARCHAR(100)
+);
+
+-- 4. Insert a minimum of 10 student records.
+INSERT INTO students (student_name, age, city) VALUES
+('Balaji Krish', 21, 'Mettur'),
+('Abarnasri', 22, 'Coimbatore'),
+('Akhil', 20, 'Madurai'),
+('Abirami', 23, 'Bangalore'),
+('Ajay', 21, 'Trichy'),
+('Agilan', 22, 'Chennai'),
+('Srimathi', 19, 'Salem'),
+('Praveen', 24, 'Hyderabad'),
+('Aravinthkumar', 20, 'Bangalore'),
+('Rukmani', 21, 'Coimbatore');
+
+
+-- 5. Write queries to display specific records:
+
+-- Query A: Display all student records.
+SELECT * FROM students;
+
+-- Query B: Display only student names.
+SELECT student_name FROM students;
+
+-- Query C: Display only student names and cities.
+SELECT student_name, city FROM students;
+
+
+-- 6. Update records using the WHERE clause:
+
+-- Query A: Update the city of a student using the WHERE clause.
+UPDATE students 
+SET city = 'Mumbai' 
+WHERE student_id = 4;
+
+-- Query B: Update the age of a student using the WHERE clause.
+UPDATE students 
+SET age = 22 
+WHERE student_id = 7;
+
+
+-- 7. Delete a student record using the WHERE clause.
+DELETE FROM students 
+WHERE student_id = 10;
+
+
+-- 8. Display the updated table to verify changes.
+SELECT * FROM students;
+
+
+-- 9. Write one example each demonstrating separate fundamental CRUD principles:
+
+-- CREATE Example
+INSERT INTO students (student_name, age, city) VALUES ('Saravanan', 23, 'Chennai');
+
+-- READ Example
+SELECT * FROM students WHERE city = 'Mettur';
+
+-- UPDATE Example
+UPDATE students SET city = 'Delhi' WHERE student_id = 8;
+
+-- DELETE Example
+DELETE FROM students WHERE student_id = 11;
+
+
+-- 10. Write queries using the requested comparison operators:
+
+-- Operator (=) : Equal to
+SELECT * FROM students WHERE age = 21;
+
+-- Operator (!=) : Not equal to
+SELECT * FROM students WHERE city != 'Mettur';
+
+-- Operator (>) : Greater than
+SELECT * FROM students WHERE age > 21;
+
+-- Operator (<) : Less than
+SELECT * FROM students WHERE age < 21;
+
+-- Operator (>=) : Greater than or equal to
+SELECT * FROM students WHERE age >= 22;
+
+-- Operator (<=) : Less than or equal to
+SELECT * FROM students WHERE age <= 20;
+
+
+-- 11. Write at least two queries using the WHERE clause to filter records.
+
+-- Filter Query 1: Filter students living in Coimbatore
+SELECT * FROM students 
+WHERE city = 'Coimbatore';
+
+-- Filter Query 2: Filter students whose age is strictly greater than 22
+SELECT * FROM students 
+WHERE age > 22;
+
+
+/* ================================================================================
+LOCAL TERMINAL RUN: mysql -u root -p < task_submission.sql
+================================================================================
+Database changed
+Rows affected: 10
+Records: 10  Duplicates: 0  Warnings: 0
+
+Executing: SELECT * FROM students;
++------------+-----------------+------+------------+
+| student_id | student_name    | age  | city       |
++------------+-----------------+------+------------+
+|          1 | Balaji Krish    |   21 | Mettur     |
+|          2 | Abarnasri       |   22 | Coimbatore |
+|          3 | Akhil           |   20 | Madurai    |
+|          4 | Abirami         |   23 | Bangalore  |
+|          5 | Ajay            |   21 | Trichy     |
+|          6 | Agilan          |   22 | Chennai    |
+|          7 | Srimathi        |   19 | Salem      |
+|          8 | Praveen         |   24 | Hyderabad  |
+|          9 | Aravinthkumar   |   20 | Bangalore  |
+|         10 | Rukmani         |   21 | Coimbatore |
++------------+-----------------+------+------------+
+
+Executing updates and final select:
+Rows affected: 1
+Rows affected: 1
+Rows affected: 1
+
+Final structural check output: 9 rows remaining in set (0.00 sec)
+*/
+
+
+--------------------------------------------------------------------------------
+PART 2: Python – Basics
+--------------------------------------------------------------------------------
+
+# single line comment
+
+'''
+multi line comment
+doing basics like variables, types, concatenation and type casting
+'''
+
+print("--- Demonstration of Required Comments ---")
+print("Single-line comment added using '#' symbol.")
+print("Multi-line comment added using triple single-quotes symbol.")
+print("\n")
+
+# 1. printing my details
+print("--- Personal Information ---")
+print("Name: Balaji Krishnamoorthy")
+print("College Name: Stackly Institute of Technology")
+print("City: Mettur")
+print("\n")
+
+
+# 2. variables for name, age, percentage and college
+name = "Balaji Krishnamoorthy"
+age = 21
+percentage = 85.50
+college = "Stackly Institute of Technology"
+
+# printing all variables
+print("--- Variables Printout ---")
+print("Name:", name)
+print("Age:", age)
+print("Percentage:", percentage)
+print("College:", college)
+print("\n")
+
+
+# 3. checking data types using type()
+num = 45
+decimal_num = 78.95
+text = "Stackly Onboarding Module"
+is_active = True
+
+print("--- Datatype Verification via type() ---")
+print("Value:", num, "| Type:", type(num))
+print("Value:", decimal_num, "| Type:", type(decimal_num))
+print("Value:", text, "| Type:", type(text))
+print("Value:", is_active, "| Type:", type(is_active))
+print("\n")
+
+
+# 4. combining two strings using + operator
+str1 = "Learning Python is "
+str2 = "the foundation for AI Engineering."
+result = str1 + str2
+
+print("--- String Concatenation Output ---")
+print("Concatenated String:", result)
+print("\n")
+
+
+# 5. type casting conversions
+print("--- Type Casting Operations ---")
+
+# string to int
+val1 = "100"
+to_int = int(val1)
+print("String '100' converted to Integer:", to_int, "| Type:", type(to_int))
+
+# int to string
+val2 = 50
+to_str = str(val2)
+print("Integer 50 converted to String:", "'" + to_str + "'", "| Type:", type(to_str))
+
+# int to float
+val3 = 25
+to_float = float(val3)
+print("Integer 25 converted to Float:", to_float, "| Type:", type(to_float))
+
+# int to boolean
+zero = 0
+one = 1
+bool_zero = bool(zero)
+bool_one = bool(one)
+
+print("Integer 0 converted to Boolean:", bool_zero, "| Type:", type(bool_zero))
+print("Integer 1 converted to Boolean:", bool_one, "| Type:", type(bool_one))
+print("\n")
+
+
+'''
+================================================================================
+VS CODE TERMINAL EXECUTION RECORD
+================================================================================
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\balaji\OneDrive\Desktop\STACKLY_TRAINING> python -u "task_submission.py"
+
+--- Demonstration of Required Comments ---
+Single-line comment added using '#' symbol.
+Multi-line comment added using triple single-quotes symbol.
+
+
+--- Personal Information ---
+Name: Balaji Krishnamoorthy
+College Name: Stackly Institute of Technology
+City: Mettur
+
+
+--- Variables Printout ---
+Name: Balaji Krishnamoorthy
+Age: 21
+Percentage: 85.5
+College: Stackly Institute of Technology
+
+
+--- Datatype Verification via type() ---
+Value: 45 | Type: <class 'int'>
+Value: 78.95 | Type: <class 'float'>
+Value: Stackly Onboarding Module | Type: <class 'str'>
+Value: True | Type: <class 'bool'>
+
+
+--- String Concatenation Output ---
+Concatenated String: Learning Python is the foundation for AI Engineering.
+
+
+--- Type Casting Operations ---
+String '100' converted to Integer: 100 | Type: <class 'int'>
+Integer 50 converted to String: '50' | Type: <class 'str'>
+Integer 25 converted to Float: 25.0 | Type: <class 'float'>
+Integer 0 converted to Boolean: False | Type: <class 'bool'>
+Integer 1 converted to Boolean: True | Type: <class 'bool'>
+
+PS C:\Users\balaji\OneDrive\Desktop\STACKLY_TRAINING> 
+'''
+
+================================================================================
+END OF TASK SUBMISSION FILE
+================================================================================
