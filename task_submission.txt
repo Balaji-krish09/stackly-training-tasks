@@ -3,6 +3,7 @@ TASK SUBMISSION: MySQL CRUD Operations & Python Basics
 File Name: task_submission.txt
 Submitted by: Balaji Krishnamoorthy
 Submission Date: 18/06/2026
+GitHub Repository: https://github.com/Balaji-krish09/stackly-training-tasks
 ================================================================================
 
 --------------------------------------------------------------------------------
