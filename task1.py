@@ -78,6 +78,7 @@ print("Integer 25 converted to Float:", to_float, "| Type:", type(to_float))
 # int to boolean
 zero = 0
 one = 1
+
 bool_zero = bool(zero)
 bool_one = bool(one)
 
