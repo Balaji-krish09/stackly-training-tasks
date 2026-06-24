@@ -1,7 +1,7 @@
-# 📚 Stackly Training – Day 1 Task Submission
+# 📚 Stackly Training – Portfolio Dashboard
 
 **Submitted by:** Balaji Krishnamoorthy  
-**Date:** 18/06/2026  
+**Date Started:** 18/06/2026  
 
 ---
 
@@ -9,11 +9,14 @@
 
 | File | Description |
 |------|-------------|
-| `task_submission.txt` | MySQL CRUD Operations & Python Basics |
+| `task_submission.txt` | Core Task Implementations (MySQL & Python) |
 
 ---
 
 ## 🗄️ Task 1: MySQL – CRUD Operations
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 18/06/2026  
 
 ### Topics Covered
 - Created a database `college_db`
@@ -42,11 +45,41 @@
 
 ---
 
+## 🗄️ Task 2: MySQL – Operators & Filtering
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 24/06/2026  
+
+### Topics Covered
+- Created an `employees` table with structural tracking columns
+- Inserted 10 distinct employee records across departments
+- Applied comparison operators to evaluate salary boundaries
+- Used `BETWEEN` operator for range filtering on ids and values
+- Used `IN` / `NOT IN` operators for group membership checking
+- Combined conditions using logical operators (`AND`, `OR`, `NOT`)
+- Implemented pattern matching queries with the `LIKE` wildcard operator
+- Sorted datasets alphabetically and numerically using `ORDER BY`
+- Structured row extractions using `LIMIT` and `OFFSET` clauses
+
+---
+
+## 🐍 Task 2: Python – Operators
+
+### Topics Covered
+- Performed mathematical operations with Arithmetic Operators (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
+- Evaluated conditional states utilizing Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+- Formulated complex truth checks using Logical Operators (`and`, `or`, `not`)
+- Handled shorthand variable data reassignment with Assignment Operators (`+=`, `-=`, `*=`, `/=`, `//=`, `%=`, `**=`)
+- Managed bitwise evaluations (`&`, `|`, `^`, `~`, `>>`, `<<`) and verified raw binary strings
+
+---
+
 ## 🛠️ Tools Used
 
 - MySQL Workbench
 - Python 3
 - VS Code
+- Git & GitHub
 
 ---
 
