@@ -10,6 +10,8 @@
 | File | Description |
 |------|-------------|
 | `task_submission.txt` | Core Task Implementations (MySQL & Python) |
+| `task3.py` | Standalone Python Conditional Logic Engine |
+| `task3_queries.sql` | Standalone MySQL Built-in Functions Portfolio |
 
 ---
 
@@ -71,6 +73,33 @@
 - Formulated complex truth checks using Logical Operators (`and`, `or`, `not`)
 - Handled shorthand variable data reassignment with Assignment Operators (`+=`, `-=`, `*=`, `/=`, `//=`, `%=`, `**=`)
 - Managed bitwise evaluations (`&`, `|`, `^`, `~`, `>>`, `<<`) and verified raw binary strings
+
+---
+
+## 🗄️ Task 3: MySQL – Built-In Functions
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 26/06/2026  
+
+### Topics Covered
+- Created a `products` table with custom precision values to trace numerical parameters
+- Applied Numeric Functions: `ROUND()`, `FLOOR()`, `CEIL()`, `ABS()`, `MOD()`, and `POWER()`
+- Handled text records using String Functions: `CONCAT()`, `LENGTH()`, `UPPER()`, `LOWER()`, `SUBSTRING()`, and `REPLACE()`
+- Cleared gap artifacts using spatial operations: `TRIM()`, `LTRIM()`, and `RTRIM()`
+- Managed operational system timestamps via Date & Time Functions: `CURDATE()`, `CURTIME()`, `NOW()`, and `DATEDIFF()`
+
+---
+
+## 🐍 Task 3: Python – Conditional Statements
+
+### Topics Covered
+- Checked positive, negative, and zero boundaries using `if-elif-else` pathways
+- Parsed modular integer splits to isolate even or odd numbers
+- Checked voting criteria threshold rules based on numeric input comparison constraints
+- Evaluated highest value metrics across multiple inputs using logical compound `and` logic
+- Classified sequential academic grades against score scales using cascading evaluation blocks
+- Validated multi-tier authentication details using Nested If logic structures
+- Assessed administrative parameters (marks vs. attendance) using layered Nested If eligibility tracking systems
 
 ---
 
