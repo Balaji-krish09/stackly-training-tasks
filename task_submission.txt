@@ -1,299 +1,269 @@
-TASK SUBMISSION: Python Operators & MySQL Advanced Operators
+TASK SUBMISSION: Python Conditional Statements & MySQL Built-In Functions
 File Name: task_submission.txt
 Submitted by: Balaji Krishnamoorthy
-Submission Date: 24/06/2026
+Submission Date: 26/06/2026
 GitHub Repository: https://github.com/Balaji-krish09/stackly-training-tasks
 
 
-PART 1: Python – Operators
+PART 1: Python – Conditional Statements
 
 
-# 1. Arithmetic Operators
+# 1. Number Sign Checker (Positive, Negative, or Zero)
+# Initializing sample numbers to evaluate sign boundaries
+num1 = 15
 
-# Initializing variables for mathematical operations
-a = 25
-b = 7
-
-print("--- Arithmetic Operator Outputs ---")
-# Performing addition using the + operator
-print("Addition (a + b):", a + b)                  
-
-# Performing subtraction using the - operator
-print("Subtraction (a - b):", a - b)               
-
-# Performing multiplication using the * operator
-print("Multiplication (a * b):", a * b)            
-
-# Performing standard float division using the / operator
-print("Division (a / b):", a / b)                  
-
-# Performing floor division to get whole number result using // operator
-print("Floor Division (a // b):", a // b)          
-
-# Performing modulus to find the remainder using % operator
-print("Modulus (a % b):", a % b)                    
-
-# Performing exponentiation to raise a to the power of b using ** operator
-print("Exponentiation (a ** b):", a ** b)          
+print("--- Program 1: Positive, Negative, or Zero Check ---")
+if num1 > 0:
+    print(f"The number {num1} is POSITIVE.")
+elif num1 < 0:
+    print(f"The number {num1} is NEGATIVE.")
+else:
+    print("The number is ZERO.")
 print("\n")
 
 
-# 2. Comparison Operators
+# 2. Even or Odd Number Checker
+# Using the mathematical modulus operator (%) to parse remainders
+num2 = 42
 
-print("--- Comparison Operator Outputs ---")
-# Checking if a is exactly equal to b using ==
-print("Is equal to (a == b):", a == b)
-
-# Checking if a is not equal to b using !=
-print("Is not equal to (a != b):", a != b)
-
-# Checking if a is strictly less than b using <
-print("Is less than (a < b):", a < b)
-
-# Checking if a is strictly greater than b using >
-print("Is greater than (a > b):", a > b)
-
-# Checking if a is less than or equal to b using <=
-print("Is less than or equal to (a <= b):", a <= b)
-
-# Checking if a is greater than or equal to b using >=
-print("Is greater than or equal to (a >= b):", a >= b)
+print("--- Program 2: Even or Odd Check ---")
+if num2 % 2 == 0:
+    print(f"The number {num2} is EVEN.")
+else:
+    print(f"The number {num2} is ODD.")
 print("\n")
 
 
-# 3. Logical Operators
+# 3. Voter Eligibility Validator
+# Comparing legal voting age parameters (Minimum age limit: 18)
+voter_age = 21
 
-# Declaring boolean states for conditional evaluations
-x = True
-y = False
-
-print("--- Logical Operator Outputs ---")
-# Evaluating if both conditions are True using 'and'
-print("Logical AND (x and y):", x and y)          
-
-# Evaluating if at least one condition is True using 'or'
-print("Logical OR (x or y):", x or y)            
-
-# Inverting the boolean state of x using 'not'
-print("Logical NOT x (not x):", not x)            
-
-# Inverting the boolean state of y using 'not'
-print("Logical NOT y (not y):", not y)            
+print("--- Program 3: Voter Eligibility Check ---")
+if voter_age >= 18:
+    print(f"Age: {voter_age}. Eligible to vote! 🗳️")
+else:
+    print(f"Age: {voter_age}. Not eligible to vote yet.")
 print("\n")
 
 
-# 4. Assignment Operators
+# 4. Largest Among Three Numbers
+# Evaluating complex multi-variable states utilizing logical 'and'
+n1 = 45
+n2 = 89
+n3 = 23
 
-# Instantiating the base tracking accumulator
-num = 20
+print("--- Program 4: Find Largest of Three Numbers ---")
+if (n1 >= n2) and (n1 >= n3):
+    largest = n1
+elif (n2 >= n1) and (n2 >= n3):
+    largest = n2
+else:
+    largest = n3
 
-print("--- Assignment Operator Outputs ---")
-# Adding 5 to num and reassigning the value
-num += 5
-print("Value after += :", num)
-
-# Subtracting 3 from num and reassigning the value
-num -= 3
-print("Value after -= :", num)
-
-# Multiplying num by 2 and reassigning the value
-num *= 2
-print("Value after *= :", num)
-
-# Dividing num by 4 and reassigning the value
-num /= 4
-print("Value after /= :", num)
-
-# Dropping decimal values via floor division and reassigning
-num //= 2
-print("Value after //= :", num)
-
-# Finding the remainder of num divided by 4 and reassigning
-num %= 4
-print("Value after %= :", num)
-
-# Raising num to the power of 3 and reassigning the value
-num **= 3
-print("Value after **= :", num)
+print(f"Numbers evaluated: {n1}, {n2}, {n3}")
+print(f"The LARGEST number is: {largest}")
 print("\n")
 
 
-# 5. Bitwise Operators
+# 5. Academic Grading Engine
+# Evaluating scale structures sequentially with logical upper bounds
+marks = 82
 
-# Defining numbers to perform direct binary operations
-a_bit = 12
-b_bit = 5
+print("--- Program 5: Academic Grade Assessment ---")
+if marks >= 90:
+    grade = "Grade A"
+elif marks >= 75:
+    grade = "Grade B"
+elif marks >= 50:
+    grade = "Grade C"
+else:
+    grade = "Grade F"
 
-print("--- Bitwise Operator Outputs ---")
-# Generating the binary representation string using bin()
-print("Binary representation of a (12):", bin(a_bit))
-print("Binary representation of b (5):", bin(b_bit))
-
-# Comparing bits using bitwise AND (&)
-print("Bitwise AND (a & b):", a_bit & b_bit)        
-
-# Combining bits using bitwise OR (|)
-print("Bitwise OR (a | b):", a_bit | b_bit)         
-
-# Running binary exclusive OR check using bitwise XOR (^)
-print("Bitwise XOR (a ^ b):", a_bit ^ b_bit)        
-
-# Inverting all bit values using bitwise NOT (~)
-print("Bitwise NOT (~a):", ~a_bit)                  
-
-# Moving binary spaces to the right by 1 using shift operator (>>)
-print("Right Shift (a >> 1):", a_bit >> 1)          
-
-# Moving binary spaces to the left by 2 using shift operator (<<)
-print("Left Shift (a << 2):", a_bit << 2)           
+print(f"Marks Secured: {marks}% -> Assigned Status: {grade}")
 print("\n")
 
 
-# LOCAL TERMINAL RUN LOG
+# 6. Nested Verification Structure: Secure Login Portal
+# Verifying credentials hierarchically to avoid processing vulnerabilities
+db_user = "admin"
+db_pass = "password123"
 
-# --- Arithmetic Operator Outputs ---
-# Addition (a + b): 32
-# Subtraction (a - b): 18
-# Multiplication (a * b): 175
-# Division (a / b): 3.5714285714285716
-# Floor Division (a // b): 3
-# Modulus (a % b): 4
-# Exponentiation (a ** b): 6103515625
+# Simulating inputs passed down to terminal systems
+input_user = "admin"
+input_pass = "password123"
+
+print("--- Program 6: Nested Gateway Login Check ---")
+if input_user == db_user:
+    print("[SYSTEM LOG]: Username verified. Checking secure token...")
+    if input_pass == db_pass:
+        print("AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted. ✅")
+    else:
+        print("AUTHENTICATION FAILED: Incorrect account security token. ❌")
+else:
+    print("AUTHENTICATION FAILED: System identifier unrecognized. ❌")
+print("\n")
+
+
+# 7. Nested Verification Structure: Scholarship Evaluation Engine
+# Layering academic limits with administrative attendance regulations
+student_marks = 88
+student_attendance = 82
+
+print("--- Program 7: Nested Scholarship Eligibility Tracker ---")
+# Gate 1: Check academic benchmark criteria
+if student_marks >= 85:
+    print("[SYSTEM LOG]: Academic marks benchmark satisfied.")
+    # Gate 2: Check institutional presence parameter
+    if student_attendance >= 80:
+        print("STATUS: Congratulations! Scholarship Approved. 🎓")
+    else:
+        print("STATUS: Denied. Attendance falls below required 80% baseline.")
+else:
+    print("STATUS: Denied. Marks fall below required 85% academic threshold.")
+print("\n")
+
+
+# ==============================================================================
+# LOCAL RUN PARAMETER VERIFICATION LOG
+# ==============================================================================
+# --- Program 1: Positive, Negative, or Zero Check ---
+# The number 15 is POSITIVE.
 # 
-# --- Comparison Operator Outputs ---
-# Is equal to (a == b): False
-# Is not equal to (a != b): True
-# Is less than (a < b): False
-# Is greater than (a > b): True
-# Is less than or equal to (a <= b): False
-# Is greater than or equal to (a >= b): True
+# --- Program 2: Even or Odd Check ---
+# The number 42 is EVEN.
 # 
-# --- Logical Operator Outputs ---
-# Logical AND (x and y): False
-# Logical OR (x or y): True
-# Logical NOT x (not x): False
-# Logical NOT y (not y): True
+# --- Program 3: Voter Eligibility Check ---
+# Age: 21. Eligible to vote! 🗳️
 # 
-# --- Assignment Operator Outputs ---
-# Value after += : 25
-# Value after -= : 22
-# Value after *= : 44
-# Value after /= : 11.0
-# Value after //= : 5.0
-# Value after %= : 1.0
-# Value after **= : 1.0
+# --- Program 4: Find Largest of Three Numbers ---
+# Numbers evaluated: 45, 89, 23
+# The LARGEST number is: 89
 # 
-# --- Bitwise Operator Outputs ---
-# Binary representation of a (12): 0b1100
-# Binary representation of b (5): 0b0101
-# Bitwise AND (a & b): 4
-# Bitwise OR (a | b): 13
-# Bitwise XOR (a ^ b): 9
-# Bitwise NOT (~a): -13
-# Right Shift (a >> 1): 6
-# Left Shift (a << 2): 48
+# --- Program 5: Academic Grade Assessment ---
+# Marks Secured: 82% -> Assigned Status: Grade B
+# 
+# --- Program 6: Nested Gateway Login Check ---
+# [SYSTEM LOG]: Username verified. Checking secure token...
+# AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted. ✅
+# 
+# --- Program 7: Nested Scholarship Eligibility Tracker ---
+# [SYSTEM LOG]: Academic marks benchmark satisfied.
+# STATUS: Congratulations! Scholarship Approved. 🎓
 
 
-PART 2: MySQL – Operators & Filtering
+PART 2: MySQL – Functions & Data Architecture
 
 
--- Table Setup
+-- 1. Database & Architecture Initialization
+USE college_db;
 
-CREATE TABLE employees (
-    emp_id INT AUTO_INCREMENT PRIMARY KEY,
-    emp_name VARCHAR(100),
-    department VARCHAR(100),
-    salary DECIMAL(10, 2),
-    city VARCHAR(100)
+DROP TABLE IF EXISTS products;
+
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10, 4), -- High precision setup to demo math functions cleanly
+    quantity INT
 );
 
 
--- Batch Data Insertion
-
-INSERT INTO employees (emp_name, department, salary, city) VALUES
-('Abarnasri', 'Development', 45000.00, 'Coimbatore'),
-('Balaji Krish', 'AI Engineering', 65000.00, 'Mettur'),
-('Akhil', 'Testing', 28000.00, 'Madurai'),
-('Abirami', 'HR', 30000.00, 'Bangalore'),
-('Ajay', 'Development', 32000.00, 'Trichy'),
-('Agilan', 'Testing', 30000.00, 'Chennai'),
-('Srimathi', 'HR', 24000.00, 'Salem'),
-('Praveen', 'Development', 55000.00, 'Hyderabad'),
-('Aravinthkumar', 'Testing', 35000.00, 'Bangalore'),
-('Ananya', 'Design', 29000.00, 'Coimbatore');
-
-
--- Comparison Operators Queries
-
-SELECT * FROM employees WHERE salary = 30000;
-SELECT * FROM employees WHERE salary != 30000;
-SELECT * FROM employees WHERE salary > 30000;
-SELECT * FROM employees WHERE salary < 30000;
-SELECT * FROM employees WHERE salary >= 30000;
-SELECT * FROM employees WHERE salary <= 30000;
+-- 2. Data Insertion Core (10 Target Records)
+INSERT INTO products (product_name, price, quantity) VALUES
+('Quantum Gaming Mouse', 1575.8945, 12),
+('Apex Mechanical Keyboard', 4500.2500, 7),
+('UltraWide Monitor 4K', 28999.9900, 3),
+(' Ergonomic Office Chair ', 8500.5000, 15), -- Embedded spacing intentionally for TRIM checks
+('Studio Condenser Mic', 3200.7550, 8),
+('USB-C Hub Multiport', 1850.4000, 22),
+('Wireless Charging Pad', 999.1500, 10),
+('   Portable SSD 1TB', 6200.0000, 5),     -- Embedded leading spacing for LTRIM checks
+('Bluetooth Gaming Headset', 2450.6070, 14),
+('HD Streaming Webcam   ', 3800.8500, 9);     -- Embedded trailing spacing for RTRIM checks
 
 
--- Between Operator Queries
+-- 3. MySQL Numeric Functions Queries
+-- ROUND(): Formats numeric targets to 2 distinct trailing spaces
+SELECT product_name, price, ROUND(price, 2) AS rounded_price FROM products;
 
-SELECT * FROM employees WHERE salary BETWEEN 25000 AND 50000;
-SELECT * FROM employees WHERE emp_id BETWEEN 2 AND 8;
+-- FLOOR(): Forces value evaluation downward to base whole integer
+SELECT product_name, price, FLOOR(price) AS floor_price FROM products;
 
+-- CEIL(): Forces value evaluation upward to next higher tracking integer
+SELECT product_name, price, CEIL(price) AS ceil_price FROM products;
 
--- In / Not In Operators Queries
+-- ABS(): Computes structural distance from vector origin for baseline -250
+SELECT ABS(-250) AS absolute_value_proof;
 
-SELECT * FROM employees WHERE department IN ('HR', 'Testing', 'Development');
-SELECT * FROM employees WHERE department NOT IN ('HR');
+-- MOD(): Captures algebraic division remainders against base 4 block
+SELECT product_name, quantity, MOD(quantity, 4) AS remainder_qty FROM products;
 
-
--- Logical Operators Separate Queries
-
--- 1. Using AND operator to match multiple criteria simultaneously
-SELECT * FROM employees WHERE salary >= 30000 AND department = 'Development';
-
--- 2. Using OR operator to pull records matching either conditions
-SELECT * FROM employees WHERE city = 'Coimbatore' OR salary > 60000;
-
--- 3. Using NOT operator to exclude specific locations cleanly
-SELECT * FROM employees WHERE NOT city = 'Chennai';
+-- POWER(): Evaluates target structures exponentially (3 raised to power of 4)
+SELECT POWER(3, 4) AS exponential_power_proof;
 
 
--- Like Operator Wildcards
+-- 4. MySQL String Functions Queries
+-- CONCAT(): Blends textual records with distinct system metadata indicators
+SELECT CONCAT(product_name, ' (Qty: ', quantity, ')') AS product_stock_profile FROM products;
 
-SELECT * FROM employees WHERE emp_name LIKE 'A%';
-SELECT * FROM employees WHERE emp_name LIKE '%n';
-SELECT * FROM employees WHERE emp_name LIKE '_____';
-SELECT * FROM employees WHERE city LIKE '%a%';
+-- LENGTH(): Measures total character footprint data counts including spaces
+SELECT product_name, LENGTH(product_name) AS title_length FROM products;
+
+-- UPPER(): Normalizes records to complete capital characters
+SELECT product_name, UPPER(product_name) AS uppercase_title FROM products;
+
+-- LOWER(): Normalizes records to complete lowercase structures
+SELECT product_name, LOWER(product_name) AS lowercase_title FROM products;
+
+-- TRIM(): Strips complete trailing and leading spaces from explicit string
+SELECT TRIM('   Sample Text Clearance Check   ') AS clean_trimmed_string;
+
+-- LTRIM(): Eliminates leading left side gap artifacts
+SELECT product_name, LTRIM(product_name) AS left_trimmed_title FROM products;
+
+-- RTRIM(): Eliminates trailing right side gap artifacts
+SELECT product_name, RTRIM(product_name) AS right_trimmed_title FROM products;
+
+-- SUBSTRING(): Truncates element text to extract first 5 structural characters
+SELECT product_name, SUBSTRING(product_name, 1, 5) AS short_code FROM products;
+
+-- REPLACE(): Searches and swaps matching word sets dynamically
+SELECT REPLACE('Stackly Training Platform', 'Platform', 'Engineers') AS updated_text_proof;
 
 
--- Order By Sort Operations
+-- 5. MySQL Date & Time Functions Queries
+-- CURDATE(): Displays structural system server year-month-day calendar state
+SELECT CURDATE() AS current_system_date;
 
-SELECT * FROM employees ORDER BY salary ASC;
-SELECT * FROM employees ORDER BY salary DESC;
-SELECT * FROM employees ORDER BY emp_name ASC;
+-- CURTIME(): Displays active real-time hours-minutes-seconds values
+SELECT CURTIME() AS current_system_time;
+
+-- NOW(): Merges unified server runtime timeline timestamps
+SELECT NOW() AS comprehensive_timestamp;
+
+-- DATEDIFF(): Computes interval values between target endpoints
+SELECT DATEDIFF('2026-06-26', '2026-06-18') AS training_span_days;
 
 
--- Limit and Offset Row Extractions
-
-SELECT * FROM employees LIMIT 5;
-SELECT * FROM employees ORDER BY salary DESC LIMIT 3;
-SELECT * FROM employees LIMIT 4 OFFSET 2;
-
-
--- LOCAL WORKBENCH VERIFICATION LOG
-
--- SELECT * FROM employees WHERE salary = 30000;
--- +--------+----------+------------+----------+-----------+
--- | emp_id | emp_name | department | salary   | city      |
--- +--------+----------+------------+----------+-----------+
--- |      4 | Abirami  | HR         | 30000.00 | Bangalore |
--- |      6 | Agilan   | Testing    | 30000.00 | Chennai   |
--- +--------+----------+------------+----------+-----------+
+-- ==============================================================================
+-- LOCAL WORKBENCH RUN VERIFICATION LOG
+-- ==============================================================================
+-- SELECT ABS(-250) AS absolute_value_proof;
+-- +----------------------+
+-- | absolute_value_proof |
+-- +----------------------+
+-- |                  250 |
+-- +----------------------+
 --
--- SELECT * FROM employees ORDER BY salary DESC LIMIT 3;
--- +--------+--------------+----------------+----------+------------+
--- | emp_id | emp_name     | department     | salary   | city       |
--- +--------+--------------+----------------+----------+------------+
--- |      2 | Balaji Krish | AI Engineering | 65000.00 | Mettur     |
--- |      8 | Praveen      | Development    | 55000.00 | Hyderabad  |
--- |      1 | Abarnasri    | Development    | 45000.00 | Coimbatore |
--- +--------+--------------+----------------+----------+------------+
+-- SELECT POWER(3, 4) AS exponential_power_proof;
+-- +-------------------------+
+-- | exponential_power_proof |
+-- +-------------------------+
+-- |                      81 |
+-- +-------------------------+
+--
+-- SELECT DATEDIFF('2026-06-26', '2026-06-18') AS training_span_days;
+-- +--------------------+
+-- | training_span_days |
+-- +--------------------+
+-- |                  8 |
+-- +--------------------+
