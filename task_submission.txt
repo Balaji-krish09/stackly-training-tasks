@@ -40,7 +40,7 @@ voter_age = 21
 
 print("--- Program 3: Voter Eligibility Check ---")
 if voter_age >= 18:
-    print(f"Age: {voter_age}. Eligible to vote! 🗳️")
+    print(f"Age: {voter_age}. Eligible to vote!")
 else:
     print(f"Age: {voter_age}. Not eligible to vote yet.")
 print("\n")
@@ -96,11 +96,11 @@ print("--- Program 6: Nested Gateway Login Check ---")
 if input_user == db_user:
     print("[SYSTEM LOG]: Username verified. Checking secure token...")
     if input_pass == db_pass:
-        print("AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted. ✅")
+        print("AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted.")
     else:
-        print("AUTHENTICATION FAILED: Incorrect account security token. ❌")
+        print("AUTHENTICATION FAILED: Incorrect account security token.")
 else:
-    print("AUTHENTICATION FAILED: System identifier unrecognized. ❌")
+    print("AUTHENTICATION FAILED: System identifier unrecognized.")
 print("\n")
 
 
@@ -115,7 +115,7 @@ if student_marks >= 85:
     print("[SYSTEM LOG]: Academic marks benchmark satisfied.")
     # Gate 2: Check institutional presence parameter
     if student_attendance >= 80:
-        print("STATUS: Congratulations! Scholarship Approved. 🎓")
+        print("STATUS: Congratulations! Scholarship Approved.")
     else:
         print("STATUS: Denied. Attendance falls below required 80% baseline.")
 else:
@@ -133,7 +133,7 @@ print("\n")
 # The number 42 is EVEN.
 # 
 # --- Program 3: Voter Eligibility Check ---
-# Age: 21. Eligible to vote! 🗳️
+# Age: 21. Eligible to vote!
 # 
 # --- Program 4: Find Largest of Three Numbers ---
 # Numbers evaluated: 45, 89, 23
@@ -144,11 +144,11 @@ print("\n")
 # 
 # --- Program 6: Nested Gateway Login Check ---
 # [SYSTEM LOG]: Username verified. Checking secure token...
-# AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted. ✅
+# AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted.
 # 
 # --- Program 7: Nested Scholarship Eligibility Tracker ---
 # [SYSTEM LOG]: Academic marks benchmark satisfied.
-# STATUS: Congratulations! Scholarship Approved. 🎓
+# STATUS: Congratulations! Scholarship Approved.
 
 
 PART 2: MySQL – Functions & Data Architecture

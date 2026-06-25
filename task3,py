@@ -1,0 +1,112 @@
+# 1. Number Sign Checker (Positive, Negative, or Zero)
+# Initializing sample numbers to evaluate sign boundaries
+num1 = 15
+
+print("--- Program 1: Positive, Negative, or Zero Check ---")
+if num1 > 0:
+    print(f"The number {num1} is POSITIVE.")
+elif num1 < 0:
+    print(f"The number {num1} is NEGATIVE.")
+else:
+    print("The number is ZERO.")
+print("\n")
+
+
+# 2. Even or Odd Number Checker
+# Using the mathematical modulus operator (%) to parse remainders
+num2 = 42
+
+print("--- Program 2: Even or Odd Check ---")
+if num2 % 2 == 0:
+    print(f"The number {num2} is EVEN.")
+else:
+    print(f"The number {num2} is ODD.")
+print("\n")
+
+# 3. Voter Eligibility Validator
+# Comparing legal voting age parameters (Minimum age limit: 18)
+voter_age = 21
+
+print("--- Program 3: Voter Eligibility Check ---")
+if voter_age >= 18:
+    print(f"Age: {voter_age}. Eligible to vote!")
+else:
+    print(f"Age: {voter_age}. Not eligible to vote yet.")
+print("\n")
+
+
+# 4. Largest Among Three Numbers
+# Evaluating complex multi-variable states utilizing logical 'and'
+n1 = 45
+n2 = 89
+n3 = 23
+
+print("--- Program 4: Find Largest of Three Numbers ---")
+if (n1 >= n2) and (n1 >= n3):
+    largest = n1
+elif (n2 >= n1) and (n2 >= n3):
+    largest = n2
+else:
+    largest = n3
+
+print(f"Numbers evaluated: {n1}, {n2}, {n3}")
+print(f"The LARGEST number is: {largest}")
+print("\n")
+
+
+# 5. Academic Grading Engine
+# Evaluating scale structures sequentially with logical upper bounds
+marks = 82
+
+print("--- Program 5: Academic Grade Assessment ---")
+if marks >= 90:
+    grade = "Grade A"
+elif marks >= 75:
+    grade = "Grade B"
+elif marks >= 50:
+    grade = "Grade C"
+else:
+    grade = "Grade F"
+
+print(f"Marks Secured: {marks}% -> Assigned Status: {grade}")
+print("\n")
+
+
+# 6. Nested Verification Structure: Secure Login Portal
+# Verifying credentials hierarchically to avoid processing vulnerabilities
+db_user = "admin"
+db_pass = "password123"
+
+# Simulating inputs passed down to terminal systems
+input_user = "admin"
+input_pass = "password123"
+
+print("--- Program 6: Nested Gateway Login Check ---")
+if input_user == db_user:
+    print("[SYSTEM LOG]: Username verified. Checking secure token...")
+    if input_pass == db_pass:
+        print("AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted. ")
+    else:
+        print("AUTHENTICATION FAILED: Incorrect account security token. ")
+else:
+    print("AUTHENTICATION FAILED: System identifier unrecognized. ")
+print("\n")
+
+
+# 7. Nested Verification Structure: Scholarship Evaluation Engine
+# Layering academic limits with administrative attendance regulations
+student_marks = 88
+student_attendance = 82
+
+print("--- Program 7: Nested Scholarship Eligibility Tracker ---")
+# Gate 1: Check academic benchmark criteria
+if student_marks >= 85:
+    print("[SYSTEM LOG]: Academic marks benchmark satisfied.")
+    # Gate 2: Check institutional presence parameter
+    if student_attendance >= 80:
+        print("STATUS: Congratulations! Scholarship Approved. ")
+    else:
+        print("STATUS: Denied. Attendance falls below required 80% baseline.")
+else:
+    print("STATUS: Denied. Marks fall below required 85% academic threshold.")
+print("\n")
