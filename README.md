@@ -12,6 +12,8 @@
 | `task_submission.txt` | Core Task Implementations (MySQL & Python) |
 | `task3.py` | Standalone Python Conditional Logic Engine |
 | `task3_queries.sql` | Standalone MySQL Built-in Functions Portfolio |
+| `task4.py` | Standalone Python Looping and Iteration Control Engine |
+| `task4.sql` | Standalone MySQL Keys, Constraints & Relational Join Queries |
 
 ---
 
@@ -100,6 +102,31 @@
 - Classified sequential academic grades against score scales using cascading evaluation blocks
 - Validated multi-tier authentication details using Nested If logic structures
 - Assessed administrative parameters (marks vs. attendance) using layered Nested If eligibility tracking systems
+
+---
+
+## 🗄️ Task 4: MySQL – Keys & Constraints
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 30/06/2026  
+
+### Topics Covered
+- Structured a parent `departments` table and a relational dependent `employees` table
+- Implemented core integrity constraints simultaneously: `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE`, `CHECK`, and `DEFAULT`
+- Established relational integrity mapping using a `FOREIGN KEY` linkage
+- Documented live runtime error definitions (Error Codes `1048`, `1062`, `3819`) to verify structural database restrictions
+- Extracted overlapping cross-table data layers combining relational matches via an `INNER JOIN`
+
+---
+
+## 🐍 Task 4: Python – Looping Statements
+
+### Topics Covered
+- Built counter controls, numerical extraction filters, and mathematical table steps via `while` loops
+- Managed numeric list sequences, dynamic structural string extractions, and accumulator factorials using `for` loops
+- Demonstrated iteration limits leveraging parameter bounds with `range(length)`, `range(start, end)`, and `range(start, end, step)`
+- Altered workflow logic loops using execution controls like `break` statements to halt ranges
+- Skipped targeted evaluation categories (even numbers and literal text vowels) using `continue` filters
 
 ---
 
