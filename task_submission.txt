@@ -1,269 +1,243 @@
-TASK SUBMISSION: Python Conditional Statements & MySQL Built-In Functions
+TASK SUBMISSION: Python Looping Statements & MySQL Keys & Constraints
 File Name: task_submission.txt
 Submitted by: Balaji Krishnamoorthy
-Submission Date: 26/06/2026
+Submission Date: 30/06/2026
 GitHub Repository: https://github.com/Balaji-krish09/stackly-training-tasks
 
 
-PART 1: Python – Conditional Statements
+PART 1: Python – Looping Statements
 
 
-# 1. Number Sign Checker (Positive, Negative, or Zero)
-# Initializing sample numbers to evaluate sign boundaries
-num1 = 15
-
-print("--- Program 1: Positive, Negative, or Zero Check ---")
-if num1 > 0:
-    print(f"The number {num1} is POSITIVE.")
-elif num1 < 0:
-    print(f"The number {num1} is NEGATIVE.")
-else:
-    print("The number is ZERO.")
+# 1. While Loop: Print numbers from 1 to 20
+i = 1
+while i <= 20:
+    print(f"Number: {i}")
+    i += 1
 print("\n")
 
 
-# 2. Even or Odd Number Checker
-# Using the mathematical modulus operator (%) to parse remainders
-num2 = 42
-
-print("--- Program 2: Even or Odd Check ---")
-if num2 % 2 == 0:
-    print(f"The number {num2} is EVEN.")
-else:
-    print(f"The number {num2} is ODD.")
+# 2. While Loop: Print even numbers from 1 to 50
+i = 1
+while i <= 50:
+    if i % 2 == 0:
+        print(f"Even Number: {i}")
+    i += 1
 print("\n")
 
 
-# 3. Voter Eligibility Validator
-# Comparing legal voting age parameters (Minimum age limit: 18)
-voter_age = 21
-
-print("--- Program 3: Voter Eligibility Check ---")
-if voter_age >= 18:
-    print(f"Age: {voter_age}. Eligible to vote!")
-else:
-    print(f"Age: {voter_age}. Not eligible to vote yet.")
+# 3. While Loop: Print multiplication table of a given number
+number = 5
+i = 1
+print(f"--- Multiplication Table of {number} (While Loop) ---")
+while i <= 10:
+    print(f"{number} x {i} = {number * i}")
+    i += 1
 print("\n")
 
 
-# 4. Largest Among Three Numbers
-# Evaluating complex multi-variable states utilizing logical 'and'
-n1 = 45
-n2 = 89
-n3 = 23
+# 4. While Loop: Find the sum of the first 10 natural numbers
+sum_natural = 0
+i = 1
+while i <= 10:
+    sum_natural += i
+    i += 1
+print(f"Sum of first 10 natural numbers: {sum_natural}\n")
 
-print("--- Program 4: Find Largest of Three Numbers ---")
-if (n1 >= n2) and (n1 >= n3):
-    largest = n1
-elif (n2 >= n1) and (n2 >= n3):
-    largest = n2
-else:
-    largest = n3
 
-print(f"Numbers evaluated: {n1}, {n2}, {n3}")
-print(f"The LARGEST number is: {largest}")
+# 5. While Loop: Reverse a given number
+original_num = 12345
+num = original_num
+reversed_num = 0
+while num > 0:
+    remainder = num % 10
+    reversed_num = (reversed_num * 10) + remainder
+    num = num // 10
+print(f"Original Number: {original_num} -> Reversed Number: {reversed_num}\n")
+
+
+# 6. For Loop: Print numbers from 1 to 20
+for i in range(1, 21):
+    print(f"Value: {i}")
 print("\n")
 
 
-# 5. Academic Grading Engine
-# Evaluating scale structures sequentially with logical upper bounds
-marks = 82
-
-print("--- Program 5: Academic Grade Assessment ---")
-if marks >= 90:
-    grade = "Grade A"
-elif marks >= 75:
-    grade = "Grade B"
-elif marks >= 50:
-    grade = "Grade C"
-else:
-    grade = "Grade F"
-
-print(f"Marks Secured: {marks}% -> Assigned Status: {grade}")
+# 7. For Loop: Print odd numbers from 1 to 50
+for i in range(1, 51):
+    if i % 2 != 0:
+        print(f"Odd Number: {i}")
 print("\n")
 
 
-# 6. Nested Verification Structure: Secure Login Portal
-# Verifying credentials hierarchically to avoid processing vulnerabilities
-db_user = "admin"
-db_pass = "password123"
-
-# Simulating inputs passed down to terminal systems
-input_user = "admin"
-input_pass = "password123"
-
-print("--- Program 6: Nested Gateway Login Check ---")
-if input_user == db_user:
-    print("[SYSTEM LOG]: Username verified. Checking secure token...")
-    if input_pass == db_pass:
-        print("AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted.")
-    else:
-        print("AUTHENTICATION FAILED: Incorrect account security token.")
-else:
-    print("AUTHENTICATION FAILED: System identifier unrecognized.")
+# 8. For Loop: Print each character of a string
+sample_string = "Stackly"
+for char in sample_string:
+    print(f"Character: {char}")
 print("\n")
 
 
-# 7. Nested Verification Structure: Scholarship Evaluation Engine
-# Layering academic limits with administrative attendance regulations
-student_marks = 88
-student_attendance = 82
-
-print("--- Program 7: Nested Scholarship Eligibility Tracker ---")
-# Gate 1: Check academic benchmark criteria
-if student_marks >= 85:
-    print("[SYSTEM LOG]: Academic marks benchmark satisfied.")
-    # Gate 2: Check institutional presence parameter
-    if student_attendance >= 80:
-        print("STATUS: Congratulations! Scholarship Approved.")
-    else:
-        print("STATUS: Denied. Attendance falls below required 80% baseline.")
-else:
-    print("STATUS: Denied. Marks fall below required 85% academic threshold.")
+# 9. For Loop: Print multiplication table of a given number
+table_num = 7
+print(f"--- Multiplication Table of {table_num} (For Loop) ---")
+for i in range(1, 11):
+    print(f"{table_num} x {i} = {table_num * i}")
 print("\n")
 
 
-# ==============================================================================
-# LOCAL RUN PARAMETER VERIFICATION LOG
-# ==============================================================================
-# --- Program 1: Positive, Negative, or Zero Check ---
-# The number 15 is POSITIVE.
-# 
-# --- Program 2: Even or Odd Check ---
-# The number 42 is EVEN.
-# 
-# --- Program 3: Voter Eligibility Check ---
-# Age: 21. Eligible to vote!
-# 
-# --- Program 4: Find Largest of Three Numbers ---
-# Numbers evaluated: 45, 89, 23
-# The LARGEST number is: 89
-# 
-# --- Program 5: Academic Grade Assessment ---
-# Marks Secured: 82% -> Assigned Status: Grade B
-# 
-# --- Program 6: Nested Gateway Login Check ---
-# [SYSTEM LOG]: Username verified. Checking secure token...
-# AUTHENTICATION SUCCESSFUL: Welcome, Admin! Access Granted.
-# 
-# --- Program 7: Nested Scholarship Eligibility Tracker ---
-# [SYSTEM LOG]: Academic marks benchmark satisfied.
-# STATUS: Congratulations! Scholarship Approved.
+# 10. For Loop: Find the factorial of a number
+fact_num = 5
+factorial = 1
+for i in range(1, fact_num + 1):
+    factorial *= i
+print(f"Factorial of {fact_num}: {factorial}\n")
 
 
-PART 2: MySQL – Functions & Data Architecture
+# 11. Range Function: range(length)
+print("--- Demonstrating range(length) ---")
+for i in range(5):
+    print(f"Index: {i}")
+print("\n")
 
 
--- 1. Database & Architecture Initialization
+# 12. Range Function: range(start, end)
+print("--- Demonstrating range(start, end) ---")
+for i in range(10, 15):
+    print(f"Value: {i}")
+print("\n")
+
+
+# 13. Range Function: range(start, end, step)
+print("--- Demonstrating range(start, end, step) ---")
+for i in range(2, 20, 3):
+    print(f"Value: {i}")
+print("\n")
+
+
+# 14. Loop Control: break when number 7 is encountered
+print("--- Loop Control: break at 7 ---")
+for i in range(1, 15):
+    if i == 7:
+        break
+    print(f"Number: {i}")
+print("\n")
+
+
+# 15. Loop Control: continue to skip all even numbers between 1 and 20
+print("--- Loop Control: continue to skip evens ---")
+for i in range(1, 21):
+    if i % 2 == 0:
+        continue
+    print(f"Odd Value: {i}")
+print("\n")
+
+
+# 16. Loop Control: skip vowels in string using continue
+input_str = "CloudEngineers"
+vowels = "aeiouAEIOU"
+print(f"Filtering vowels from: {input_str}")
+for char in input_str:
+    if char in vowels:
+        continue
+    print(f"Consonant Character: {char}")
+print("\n")
+
+
+PART 2: MySQL – Keys & Constraints
+
+
+-- 1. Departments Table Schema Design
 USE college_db;
 
-DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS departments;
 
-CREATE TABLE products (
-    product_id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(100),
-    price DECIMAL(10, 4), -- High precision setup to demo math functions cleanly
-    quantity INT
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
 );
 
 
--- 2. Data Insertion Core (10 Target Records)
-INSERT INTO products (product_name, price, quantity) VALUES
-('Quantum Gaming Mouse', 1575.8945, 12),
-('Apex Mechanical Keyboard', 4500.2500, 7),
-('UltraWide Monitor 4K', 28999.9900, 3),
-(' Ergonomic Office Chair ', 8500.5000, 15), -- Embedded spacing intentionally for TRIM checks
-('Studio Condenser Mic', 3200.7550, 8),
-('USB-C Hub Multiport', 1850.4000, 22),
-('Wireless Charging Pad', 999.1500, 10),
-('   Portable SSD 1TB', 6200.0000, 5),     -- Embedded leading spacing for LTRIM checks
-('Bluetooth Gaming Headset', 2450.6070, 14),
-('HD Streaming Webcam   ', 3800.8500, 9);     -- Embedded trailing spacing for RTRIM checks
+-- 2. Departments Data Population
+INSERT INTO departments (dept_id, dept_name) VALUES
+(10, 'Engineering'),
+(20, 'Data Science'),
+(30, 'Human Resources'),
+(40, 'Finance'),
+(50, 'Marketing');
 
 
--- 3. MySQL Numeric Functions Queries
--- ROUND(): Formats numeric targets to 2 distinct trailing spaces
-SELECT product_name, price, ROUND(price, 2) AS rounded_price FROM products;
-
--- FLOOR(): Forces value evaluation downward to base whole integer
-SELECT product_name, price, FLOOR(price) AS floor_price FROM products;
-
--- CEIL(): Forces value evaluation upward to next higher tracking integer
-SELECT product_name, price, CEIL(price) AS ceil_price FROM products;
-
--- ABS(): Computes structural distance from vector origin for baseline -250
-SELECT ABS(-250) AS absolute_value_proof;
-
--- MOD(): Captures algebraic division remainders against base 4 block
-SELECT product_name, quantity, MOD(quantity, 4) AS remainder_qty FROM products;
-
--- POWER(): Evaluates target structures exponentially (3 raised to power of 4)
-SELECT POWER(3, 4) AS exponential_power_proof;
+-- 3. Employees Table Schema Design
+CREATE TABLE employees (
+    emp_id INT AUTO_INCREMENT PRIMARY KEY,
+    emp_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    salary DECIMAL(10, 2) CHECK (salary > 10000),
+    city VARCHAR(50) DEFAULT 'Chennai',
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
+);
 
 
--- 4. MySQL String Functions Queries
--- CONCAT(): Blends textual records with distinct system metadata indicators
-SELECT CONCAT(product_name, ' (Qty: ', quantity, ')') AS product_stock_profile FROM products;
-
--- LENGTH(): Measures total character footprint data counts including spaces
-SELECT product_name, LENGTH(product_name) AS title_length FROM products;
-
--- UPPER(): Normalizes records to complete capital characters
-SELECT product_name, UPPER(product_name) AS uppercase_title FROM products;
-
--- LOWER(): Normalizes records to complete lowercase structures
-SELECT product_name, LOWER(product_name) AS lowercase_title FROM products;
-
--- TRIM(): Strips complete trailing and leading spaces from explicit string
-SELECT TRIM('   Sample Text Clearance Check   ') AS clean_trimmed_string;
-
--- LTRIM(): Eliminates leading left side gap artifacts
-SELECT product_name, LTRIM(product_name) AS left_trimmed_title FROM products;
-
--- RTRIM(): Eliminates trailing right side gap artifacts
-SELECT product_name, RTRIM(product_name) AS right_trimmed_title FROM products;
-
--- SUBSTRING(): Truncates element text to extract first 5 structural characters
-SELECT product_name, SUBSTRING(product_name, 1, 5) AS short_code FROM products;
-
--- REPLACE(): Searches and swaps matching word sets dynamically
-SELECT REPLACE('Stackly Training Platform', 'Platform', 'Engineers') AS updated_text_proof;
+-- 4. Employees Data Population
+INSERT INTO employees (emp_name, email, salary, city, dept_id) VALUES
+('Balaji K', 'balaji@stackly.com', 45000.00, 'Chennai', 10),
+('Anand R', 'anand@stackly.com', 52000.00, 'Bangalore', 10),
+('Suresh M', 'suresh@stackly.com', 38000.00, 'Chennai', 20),
+('Priya S', 'priya@stackly.com', 41000.00, 'Hyderabad', 30),
+('Rahul V', 'rahul@stackly.com', 60000.00, 'Chennai', 20),
+('Vikram N', 'vikram@stackly.com', 28000.00, 'Mumbai', 40),
+('Divya K', 'divya@stackly.com', 32000.00, 'Chennai', 50),
+('Arjun B', 'arjun@stackly.com', 75000.00, 'Pune', 10),
+('Deepa R', 'deepa@stackly.com', 48000.00, 'Chennai', 30),
+('Karthik P', 'karthik@stackly.com', 34000.00, 'Coimbatore', 40);
 
 
--- 5. MySQL Date & Time Functions Queries
--- CURDATE(): Displays structural system server year-month-day calendar state
-SELECT CURDATE() AS current_system_date;
+-- 5. Constraint Verification Queries
+-- AUTO_INCREMENT & PRIMARY KEY Verification
+INSERT INTO employees (emp_name, email, salary, city, dept_id) VALUES ('Test User', 'test@stackly.com', 15000.00, 'Chennai', 10);
 
--- CURTIME(): Displays active real-time hours-minutes-seconds values
-SELECT CURTIME() AS current_system_time;
+-- DEFAULT Verification
+INSERT INTO employees (emp_name, email, salary, dept_id) VALUES ('Default City User', 'default@stackly.com', 22000.00, 20);
 
--- NOW(): Merges unified server runtime timeline timestamps
-SELECT NOW() AS comprehensive_timestamp;
+-- NOT NULL Verification Check
+INSERT INTO employees (emp_name, email, salary, dept_id) VALUES (NULL, 'null@stackly.com', 20000.00, 10);
 
--- DATEDIFF(): Computes interval values between target endpoints
-SELECT DATEDIFF('2026-06-26', '2026-06-18') AS training_span_days;
+-- UNIQUE Verification Check
+INSERT INTO employees (emp_name, email, salary, dept_id) VALUES ('Duplicate User', 'balaji@stackly.com', 25000.00, 10);
+
+-- CHECK Verification Check
+INSERT INTO employees (emp_name, email, salary, dept_id) VALUES ('Low Pay User', 'low@stackly.com', 5000.00, 10);
+
+
+-- 6. Comprehensive Dataset Extractions
+SELECT * FROM employees;
+
+
+-- 7. Relational Cross-Table Join Extractions
+SELECT e.emp_name, d.dept_name 
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id;
 
 
 -- ==============================================================================
--- LOCAL WORKBENCH RUN VERIFICATION LOG
+-- MYSQL WORKBENCH CONSTRAINT VERIFICATION LOG (actual run output)
 -- ==============================================================================
--- SELECT ABS(-250) AS absolute_value_proof;
--- +----------------------+
--- | absolute_value_proof |
--- +----------------------+
--- |                  250 |
--- +----------------------+
 --
--- SELECT POWER(3, 4) AS exponential_power_proof;
--- +-------------------------+
--- | exponential_power_proof |
--- +-------------------------+
--- |                      81 |
--- +-------------------------+
+-- 1. AUTO_INCREMENT & PRIMARY KEY VERIFICATION
+-- QUERY: INSERT INTO employees (emp_name, email, salary, city, dept_id) VALUES ('Test User', 'test@stackly.com', 15000.00, 'Chennai', 10);
+-- RESPONSE: 1 row(s) affected
 --
--- SELECT DATEDIFF('2026-06-26', '2026-06-18') AS training_span_days;
--- +--------------------+
--- | training_span_days |
--- +--------------------+
--- |                  8 |
--- +--------------------+
+-- 2. DEFAULT CONSTRAINT VERIFICATION
+-- QUERY: INSERT INTO employees (emp_name, email, salary, dept_id) VALUES ('Default City User', 'default@stackly.com', 22000.00, 20);
+-- RESPONSE: 1 row(s) affected ('city' column automatically populated with 'Chennai')
+--
+-- 3. NOT NULL CONSTRAINT VERIFICATION
+-- QUERY: INSERT INTO employees (emp_name, email, salary, dept_id) VALUES (NULL, 'null@stackly.com', 20000.00, 10);
+-- RESPONSE: Error Code: 1048. Column 'emp_name' cannot be null
+--
+-- 4. UNIQUE CONSTRAINT VERIFICATION
+-- QUERY: INSERT INTO employees (emp_name, email, salary, dept_id) VALUES ('Duplicate User', 'balaji@stackly.com', 25000.00, 10);
+-- RESPONSE: Error Code: 1062. Duplicate entry 'balaji@stackly.com' for key 'employees.email'
+--
+-- 5. CHECK CONSTRAINT VERIFICATION
+-- QUERY: INSERT INTO employees (emp_name, email, salary, dept_id) VALUES ('Low Pay User', 'low@stackly.com', 5000.00, 10);
+-- RESPONSE: Error Code: 3819. Check constraint 'employees_chk_1' is violated.
