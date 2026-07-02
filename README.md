@@ -13,7 +13,9 @@
 | `task3.py` | Standalone Python Conditional Logic Engine |
 | `task3_queries.sql` | Standalone MySQL Built-in Functions Portfolio |
 | `task4.py` | Standalone Python Looping and Iteration Control Engine |
-| `task4.sql` | Standalone MySQL Keys, Constraints & Relational Join Queries |
+| `task4.sql` | Standalone MySQL Keys & Integrity Constraints Verification Script |
+| `task5.py` | Standalone Python Sequences & Collections Engine (Lists & Tuples) |
+| `task5.sql` | Standalone MySQL Relational Join Query Suite |
 
 ---
 
@@ -71,7 +73,7 @@
 
 ### Topics Covered
 - Performed mathematical operations with Arithmetic Operators (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
-- Evaluated conditional states utilizing Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+- Evaluated conditional states utilizing Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, >=`)
 - Formulated complex truth checks using Logical Operators (`and`, `or`, `not`)
 - Handled shorthand variable data reassignment with Assignment Operators (`+=`, `-=`, `*=`, `/=`, `//=`, `%=`, `**=`)
 - Managed bitwise evaluations (`&`, `|`, `^`, `~`, `>>`, `<<`) and verified raw binary strings
@@ -115,7 +117,6 @@
 - Implemented core integrity constraints simultaneously: `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE`, `CHECK`, and `DEFAULT`
 - Established relational integrity mapping using a `FOREIGN KEY` linkage
 - Documented live runtime error definitions (Error Codes `1048`, `1062`, `3819`) to verify structural database restrictions
-- Extracted overlapping cross-table data layers combining relational matches via an `INNER JOIN`
 
 ---
 
@@ -127,6 +128,32 @@
 - Demonstrated iteration limits leveraging parameter bounds with `range(length)`, `range(start, end)`, and `range(start, end, step)`
 - Altered workflow logic loops using execution controls like `break` statements to halt ranges
 - Skipped targeted evaluation categories (even numbers and literal text vowels) using `continue` filters
+
+---
+
+## 🗄️ Task 5: MySQL – Joins
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 03/07/2026  
+
+### Topics Covered
+- Constructed primary relational schemas utilizing `PRIMARY KEY` and `FOREIGN KEY` constraints
+- Merged active structural datasets using intersecting data rules with `INNER JOIN`
+- Captured unmatched parent identities containing null cross-references with `LEFT OUTER JOIN`
+- Maintained complete department list structural persistence with `RIGHT OUTER JOIN`
+- Simulated a complete bidirectional database schema output using a combined `LEFT JOIN`, `RIGHT JOIN`, and a duplicate-filtering `UNION` operator
+- Developed complete Cartesian matrix permutations of two sets using a `CROSS JOIN` statement along with rows counting optimization queries
+
+---
+
+## 🐍 Task 5: Python – Data Structures (Lists & Tuples)
+
+### Topics Covered
+- Managed mutable sequences using item adjustments via `append()`, `insert()`, and multi-item element additions with `extend()`
+- Handled structural array reduction routines using explicit content targeting via `remove()` and index-based item removals via `pop()` and `pop(index)`
+- Extracted value placement properties and repetition factors utilizing `index()` and `count()` methods
+- Conducted internal element reordering tasks using `reverse()` and alphanumeric `sort()` modifiers
+- Handled immutable arrays with data location targeting alongside multi-variable dynamic unpacking procedures across both Python Lists and Tuples
 
 ---
 
