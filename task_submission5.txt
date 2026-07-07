@@ -1,0 +1,185 @@
+TASK SUBMISSION: MySQL Joins & Python Data Structures (Lists & Tuples)
+File Name: task_submission.txt
+Submitted by: Balaji Krishnamoorthy
+Submission Date: 03/07/2026
+GitHub Repository: https://github.com/Balaji-krish09/stackly-training-tasks
+
+
+PART 1: MySQL – Joins
+
+
+-- 1. Table Creation: departments
+USE college_db;
+
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS departments;
+
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+
+-- 2. Table Creation: employees
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(100),
+    salary DECIMAL(10, 2),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
+);
+
+
+-- 3. Data Insertion: Minimum 5 department records
+INSERT INTO departments (dept_id, dept_name) VALUES
+(10, 'Engineering'),
+(20, 'Data Science'),
+(30, 'Human Resources'),
+(40, 'Finance'),
+(50, 'Marketing');
+
+
+-- 4. Data Insertion: Minimum 10 employee records
+INSERT INTO employees (emp_id, emp_name, salary, dept_id) VALUES
+(101, 'Balaji K', 45000.00, 10),
+(102, 'Anand R', 52000.00, 10),
+(103, 'Suresh M', 38000.00, 20),
+(104, 'Priya S', 41000.00, 30),
+(105, 'Rahul V', 60000.00, 20),
+(106, 'Vikram N', 28000.00, 40),
+(107, 'Divya K', 32000.00, NULL),
+(108, 'Arjun B', 75000.00, 10),
+(109, 'Deepa R', 48000.00, 30),
+(110, 'Karthik P', 34000.00, NULL);
+
+
+-- 5. INNER JOIN Query
+SELECT e.emp_name, d.dept_name
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id;
+
+
+-- 6. LEFT OUTER JOIN Query
+SELECT e.emp_name, d.dept_name
+FROM employees e
+LEFT OUTER JOIN departments d ON e.dept_id = d.dept_id;
+
+
+-- 7. RIGHT OUTER JOIN Query
+SELECT d.dept_name, e.emp_name
+FROM employees e
+RIGHT OUTER JOIN departments d ON e.dept_id = d.dept_id;
+
+
+-- 8. Simulated FULL OUTER JOIN Query
+SELECT e.emp_name, d.dept_name
+FROM employees e
+LEFT JOIN departments d ON e.dept_id = d.dept_id
+UNION
+SELECT e.emp_name, d.dept_name
+FROM employees e
+RIGHT JOIN departments d ON e.dept_id = d.dept_id;
+
+
+-- 9. CROSS JOIN Query
+SELECT e.emp_name, d.dept_name
+FROM employees e
+CROSS JOIN departments d;
+
+
+-- 10. Total rows returned by CROSS JOIN Query
+SELECT COUNT(*) AS total_rows
+FROM employees e
+CROSS JOIN departments d;
+
+
+PART 2: Python – Lists
+
+
+# 1. Create a list containing at least 10 elements
+tech_stack = ["Python", "MySQL", "Git", "VS Code", "Java", "C++", "HTML", "CSS", "JavaScript", "Docker"]
+print(f"Initial List: {tech_stack}")
+
+# 2. Add an element using append()
+tech_stack.append("AWS")
+print(f"After append(): {tech_stack}")
+
+# 3. Insert an element at the 3rd position using insert()
+tech_stack.insert(2, "Django")
+print(f"After insert(): {tech_stack}")
+
+# 4. Add multiple elements using extend()
+tech_stack.extend(["Flask", "React"])
+print(f"After extend(): {tech_stack}")
+
+# 5. Remove an element using remove()
+tech_stack.remove("Java")
+print(f"After remove(): {tech_stack}")
+
+# 6. Remove the last element using pop()
+tech_stack.pop()
+print(f"After pop(): {tech_stack}")
+
+# 7. Remove an element at a specific index using pop(index)
+tech_stack.pop(4)
+print(f"After pop(index): {tech_stack}")
+
+# 8. Count the occurrences of an element using count()
+element_count = tech_stack.count("Python")
+print(f"Count of 'Python': {element_count}")
+print(f"List state: {tech_stack}")
+
+# 9. Find the index of an element using index()
+element_index = tech_stack.index("Git")
+print(f"Index of 'Git': {element_index}")
+print(f"List state: {tech_stack}")
+
+# 10. Reverse the list using reverse()
+tech_stack.reverse()
+print(f"After reverse(): {tech_stack}")
+
+# 11. Sort the list using sort()
+tech_stack.sort()
+print(f"After sort(): {tech_stack}")
+
+# 12. Create a copy of the list using copy()
+copied_list = tech_stack.copy()
+print(f"Copied List: {copied_list}")
+
+
+PART 3: Python – Tuples
+
+
+# 1. Create a tuple containing at least 8 elements
+marks_tuple = (85, 92, 78, 88, 95, 90, 82, 89)
+
+# 2. Find the number of occurrences of an element using count()
+occurrences_count = marks_tuple.count(90)
+print(f"Occurrences of 90: {occurrences_count}")
+
+# 3. Find the index of an element using index()
+position_index = marks_tuple.index(95)
+print(f"Index of 95: {position_index}")
+
+# 4. Access and print: First element
+print(f"First element: {marks_tuple[0]}")
+
+# 5. Access and print: Last element
+print(f"Last element: {marks_tuple[-1]}")
+
+# 6. Access and print: Fifth element
+print(f"Fifth element: {marks_tuple[4]}")
+
+# 7. Tuple unpacking: Create a tuple with three values, unpack into three separate variables, and print
+framework_tuple = ("FastAPI", "Express", "Spring")
+var1, var2, var3 = framework_tuple
+print(f"Variable 1: {var1}")
+print(f"Variable 2: {var2}")
+print(f"Variable 3: {var3}")
+
+# 8. List unpacking: Demonstrate list unpacking using a list with three elements
+database_list = ["MySQL", "PostgreSQL", "MongoDB"]
+db1, db2, db3 = database_list
+print(f"Database 1: {db1}")
+print(f"Database 2: {db2}")
+print(f"Database 3: {db3}")
