@@ -1,7 +1,7 @@
 TASK SUBMISSION: Python Collections & Functions & MySQL Aggregate Operations
 File Name: task_submission.txt
 Submitted by: Balaji Krishnamoorthy
-Submission Date: 08/07/2026
+Submission Date: 07/07/2026
 GitHub Repository: https://github.com/Balaji-krish09/stackly-training-tasks
 
 
