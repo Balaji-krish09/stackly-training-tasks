@@ -16,6 +16,8 @@
 | `task4.sql` | Standalone MySQL Keys & Integrity Constraints Verification Script |
 | `task5.py` | Standalone Python Sequences & Collections Engine (Lists & Tuples) |
 | `task5.sql` | Standalone MySQL Relational Join Query Suite |
+| `task6.py` | Standalone Python Collections & Custom Functional Logic Engine (Sets, Dicts & Functions) |
+| `task6.sql` | Standalone MySQL Data Aggregation, Grouping & Having Query Suite |
 
 ---
 
@@ -154,6 +156,29 @@
 - Extracted value placement properties and repetition factors utilizing `index()` and `count()` methods
 - Conducted internal element reordering tasks using `reverse()` and alphanumeric `sort()` modifiers
 - Handled immutable arrays with data location targeting alongside multi-variable dynamic unpacking procedures across both Python Lists and Tuples
+
+---
+
+## 🗄️ Task 6: MySQL – Aggregate Functions & Grouping
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 08/07/2026  
+
+### Topics Covered
+- Constructed a 15-record dataset to analyze company-wide financial metrics.
+- Applied math functions `COUNT()`, `MAX()`, `MIN()`, `AVG()`, and `SUM()` to track macro-level statistics.
+- Grouped data values by segment rules using `GROUP BY` to isolate metrics for each distinct corporate division.
+- Screened partitioned groups using `HAVING` filters to check team populations, average earnings above 30k, budget bounds above 100k, and high-tier salary ceilings.
+
+---
+
+## 🐍 Task 6: Python – Collections & Functions
+
+### Topics Covered
+- Managed unique item maps with mathematical checks using set mutations (`add()`, `remove()`) and group links (`union()`, `intersection()`, `difference()`).
+- Managed structured database mappings utilizing key-value operations through `keys()`, `values()`, `items()`, and extraction rules like `pop()`.
+- Wrote clear logic paths using Python functions with various setups: standard, keyword, default, variable parameters (`*args`), and structural maps (`**kwargs`).
+- Implemented multi-parameter logic routines that calculate metric totals, powers, and high-value peaks to return variables cleanly to caller namespaces.
 
 ---
 
