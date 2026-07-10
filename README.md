@@ -18,6 +18,8 @@
 | `task5.sql` | Standalone MySQL Relational Join Query Suite |
 | `task6.py` | Standalone Python Collections & Custom Functional Logic Engine (Sets, Dicts & Functions) |
 | `task6.sql` | Standalone MySQL Data Aggregation, Grouping & Having Query Suite |
+| `task7.py` | Standalone Python String Engineering & Manipulation Suite |
+| `task7.sql` | Standalone MySQL Nested & Correlated Subquery Engine |
 
 ---
 
@@ -32,7 +34,7 @@
 - Inserted 10 student records
 - Performed SELECT, UPDATE, DELETE using `WHERE` clause
 - Demonstrated all 4 CRUD operations individually
-- Used all comparison operators: `=` `!=` `>` `<` `>=` `<=`
+- Used all comparison operators: `=` `!=` `>` `<` `>` `<=`
 - Wrote filter queries using `WHERE` clause
 
 ---
@@ -179,6 +181,32 @@
 - Managed structured database mappings utilizing key-value operations through `keys()`, `values()`, `items()`, and extraction rules like `pop()`.
 - Wrote clear logic paths using Python functions with various setups: standard, keyword, default, variable parameters (`*args`), and structural maps (`**kwargs`).
 - Implemented multi-parameter logic routines that calculate metric totals, powers, and high-value peaks to return variables cleanly to caller namespaces.
+
+---
+
+## 🗄️ Task 7: MySQL – Nested & Correlated Subqueries
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 11/07/2026  
+
+### Topics Covered
+- Formulated **Single-Row Subqueries** to locate operational outliers, computing boundaries for absolute maximums, minimums, and above-average wage brackets.
+- Engineered **Multi-Row Subqueries** combining structural set-membership operators (`IN`), relative scale evaluations (`ANY`), and strict ceiling qualifiers (`ALL`).
+- Implemented **Correlated Subqueries** where inner criteria evaluations directly depend on outer row processing loops to match departmental target averages.
+- Tracked intra-departmental maximum thresholds to correctly isolate leadership profiles inside isolated team scopes.
+
+---
+
+## 🐍 Task 7: Python – Advanced String Engineering
+
+### Topics Covered
+- Handled string alterations using memory modifiers for explicit duplication (`*`) and structural string assembly combinations (`+`).
+- Standardized user text inputs using systemic layout overrides via `upper()`, `lower()`, `title()`, and core `capitalize()` functions.
+- Sanitized input fields by stripping padding using positional whitespace cleanup routines (`strip()`, `lstrip()`, `rstrip()`).
+- Tokenized plain sentence strings into dynamic list arrays with `split()`, and reversed arrays back into readable strings via configured `join()` characters.
+- Scanned text blocks to map specific substring sequences using sequential structural checks (`find()`, `count()`, `startswith()`, `endswith()`).
+- Validated text type criteria boundaries leveraging system evaluation assertions (`isalpha()`, `isdigit()`, `isalnum()`).
+- Built clean output interfaces using embedded f-strings and control parameters (`\n`, `\t`).
 
 ---
 
