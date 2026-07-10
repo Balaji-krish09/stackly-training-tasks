@@ -1,0 +1,223 @@
+TASK SUBMISSION: Python Collections & Functions & MySQL Aggregate Operations
+File Name: task_submission.txt
+Submitted by: Balaji Krishnamoorthy
+Submission Date: 07/07/2026
+GitHub Repository: https://github.com/Balaji-krish09/stackly-training-tasks
+
+
+PART 1: Python – Sets
+
+
+# 1. Create two sets containing at least 6 integer values each
+set_a = {10, 20, 30, 40, 50, 60}
+set_b = {40, 50, 60, 70, 80, 90}
+print(f"Initial Set A: {set_a}")
+print(f"Initial Set B: {set_b}")
+
+# 2. Add a new element using add()
+set_a.add(100)
+print(f"After add(100) to Set A: {set_a}")
+
+# 3. Remove an element using remove()
+set_a.remove(20)
+print(f"After remove(20) from Set A: {set_a}")
+
+# 4. Display the union of both sets using union()
+union_set = set_a.union(set_b)
+print(f"Union of Set A and Set B: {union_set}")
+
+# 5. Display the common elements using intersection()
+intersection_set = set_a.intersection(set_b)
+print(f"Intersection of Set A and Set B: {intersection_set}")
+
+# 6. Display the difference between the two sets using difference()
+difference_set = set_a.difference(set_b)
+print(f"Difference (Set A - Set B): {difference_set}")
+
+# 7. Create a copy of one set and clear it using clear()
+copied_set = set_a.copy()
+print(f"Copied Set (Before Clear): {copied_set}")
+copied_set.clear()
+print(f"Copied Set (After clear()): {copied_set}")
+print(f"Original Set A remains: {set_a}")
+
+
+PART 2: Python – Dictionaries
+
+
+# 1. Create a dictionary named student
+student = {
+    "id": 101,
+    "name": "Balaji Krishnamoorthy",
+    "age": 21,
+    "city": "Chennai",
+    "course": "Computer Science"
+}
+print(f"Initial Student Dictionary: {student}")
+
+# 2. Display all keys using keys()
+all_keys = student.keys()
+print(f"Keys: {all_keys}")
+
+# 3. Display all values using values()
+all_values = student.values()
+print(f"Values: {all_values}")
+
+# 4. Display all key-value pairs using items()
+all_items = student.items()
+print(f"Items (Key-Value Pairs): {all_items}")
+
+# 5. Remove one key using pop()
+removed_value = student.pop("course")
+print(f"Removed Key 'course' with Value: {removed_value}")
+print(f"After pop('course'): {student}")
+
+# 6. Clear the dictionary using clear()
+student.clear()
+print(f"After clear(): {student}")
+
+
+PART 3: Python – Functions
+
+
+# 1. Function to print a welcome message
+def welcome_message():
+    print("Welcome to Stackly Advanced Python Training Session!")
+
+print("--- Executing Welcome Message ---")
+welcome_message()
+print()
+
+# 2. Function to add two numbers
+def add_numbers(num1, num2):
+    print(f"Sum Calculation: {num1} + {num2} = {num1 + num2}")
+
+# 3. Function to find the square of a number
+def square_number(num):
+    print(f"Square Calculation: {num}^2 = {num * num}")
+
+# 4. Function to find the largest of two numbers
+def largest_of_two(num1, num2):
+    largest = num1 if num1 > num2 else num2
+    print(f"Largest between {num1} and {num2} is: {largest}")
+
+# 5. Demonstrate Positional arguments
+print("--- Demonstrating Positional Arguments ---")
+add_numbers(15, 25)
+
+# 6. Demonstrate Keyword arguments
+print("--- Demonstrating Keyword Arguments ---")
+largest_of_two(num2=50, num1=85)
+
+# 7. Demonstrate Default arguments
+def greet_user(username="Developer"):
+    print(f"Hello, {username}!")
+
+print("--- Demonstrating Default Arguments ---")
+greet_user()
+greet_user("Balaji")
+
+# 8. Demonstrate Variable length arguments using *args
+def sum_all_numbers(*args):
+    total = sum(args)
+    print(f"Sum of variables length args {args} is: {total}")
+
+print("--- Demonstrating Variable Length Arguments (*args) ---")
+sum_all_numbers(10, 20, 30, 40)
+
+# 9. Demonstrate Variable length keyword arguments using **kwargs
+def display_profile(**kwargs):
+    print("User Profile Information:")
+    for key, value in kwargs.items():
+        print(f"  {key}: {value}")
+
+print("--- Demonstrating Variable Length Keyword Arguments (**kwargs) ---")
+display_profile(Name="Balaji K", Domain="AI Engineering", Experience="Entry")
+print()
+
+# 10. Functions that return values
+def return_sum(a, b):
+    return a + b
+
+def return_cube(num):
+    return num * num * num
+
+def return_largest_of_three(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+
+print("--- Storing and Printing Function Return Values ---")
+# Store and print sum return value
+calculated_sum = return_sum(45, 55)
+print(f"Returned Sum Value: {calculated_sum}")
+
+# Store and print cube return value
+calculated_cube = return_cube(4)
+print(f"Returned Cube Value: {calculated_cube}")
+
+# Store and print largest return value
+calculated_largest = return_largest_of_three(72, 95, 43)
+print(f"Returned Largest Value: {calculated_largest}")
+
+
+PART 4: MySQL – Aggregate Functions & Grouping
+
+
+-- 1. Table Creation: employees
+USE college_db;
+
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(100),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2),
+    city VARCHAR(50)
+);
+
+
+-- 2. Data Insertion: 15 distinct employee records across departments
+INSERT INTO employees (emp_id, emp_name, department, salary, city) VALUES
+(101, 'Balaji K', 'Engineering', 65000.00, 'Chennai'),
+(102, 'Anand R', 'Engineering', 52000.00, 'Bangalore'),
+(103, 'Suresh M', 'Data Science', 58000.00, 'Chennai'),
+(104, 'Priya S', 'Human Resources', 41000.00, 'Hyderabad'),
+(105, 'Rahul V', 'Data Science', 62000.00, 'Chennai'),
+(106, 'Vikram N', 'Finance', 48000.00, 'Mumbai'),
+(107, 'Divya K', 'Marketing', 32000.00, 'Chennai'),
+(108, 'Arjun B', 'Engineering', 75000.00, 'Pune'),
+(109, 'Deepa R', 'Human Resources', 48000.00, 'Chennai'),
+(110, 'Karthik P', 'Finance', 54000.00, 'Coimbatore'),
+(111, 'Meena T', 'Engineering', 46000.00, 'Chennai'),
+(112, 'Sanjay L', 'Data Science', 28000.00, 'Bangalore'),
+(113, 'Asha W', 'Human Resources', 39000.00, 'Hyderabad'),
+(114, 'Hari H', 'Finance', 33000.00, 'Mumbai'),
+(115, 'Gita J', 'Marketing', 45000.00, 'Pune');
+
+
+-- 3. Core Aggregate Functions Queries
+SELECT COUNT(*) AS total_employees FROM employees;
+SELECT MAX(salary) AS highest_salary FROM employees;
+SELECT MIN(salary) AS lowest_salary FROM employees;
+SELECT AVG(salary) AS average_salary FROM employees;
+SELECT SUM(salary) AS total_salary FROM employees;
+
+
+-- 4. GROUP BY Queries
+SELECT department, COUNT(*) AS employee_count FROM employees GROUP BY department;
+SELECT department, AVG(salary) AS average_salary FROM employees GROUP BY department;
+SELECT department, MAX(salary) AS highest_salary FROM employees GROUP BY department;
+SELECT department, MIN(salary) AS lowest_salary FROM employees GROUP BY department;
+SELECT department, SUM(salary) AS total_salary FROM employees GROUP BY department;
+
+
+-- 5. HAVING Clause Queries
+SELECT department, COUNT(*) AS employee_count FROM employees GROUP BY department HAVING COUNT(*) > 2;
+SELECT department, AVG(salary) AS average_salary FROM employees GROUP BY department HAVING AVG(salary) > 30000;
+SELECT department, SUM(salary) AS total_salary FROM employees GROUP BY department HAVING SUM(salary) > 100000;
+SELECT department, MAX(salary) AS highest_salary FROM employees GROUP BY department HAVING MAX(salary) > 50000;
