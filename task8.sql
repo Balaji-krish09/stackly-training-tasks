@@ -1,101 +1,96 @@
-import os
+-- SECTION 1: DATABASE TRANSACTION CONTROL SEGMENTS
+USE college_db;
+DROP TABLE IF EXISTS bank_accounts;
 
-print("==================== PYTHON FILE HANDLING TASKS ====================\n")
+CREATE TABLE bank_accounts (
+    account_id INT PRIMARY KEY,
+    account_holder VARCHAR(100),
+    balance DECIMAL(10, 2)
+);
 
-# 1. Pre-requisite Setup: Initialize student.txt for reading demonstrations
-print("[System] Generating student.txt for standard read tracking...")
-with open("student.txt", "w") as init_file:
-    init_file.write("Balaji Krishnamoorthy - CSE\nLine 2: Stackly Python Module\nLine 3: File Handling Tasks\n")
+INSERT INTO bank_accounts (account_id, account_holder, balance) VALUES
+(1001, 'Balaji Krishnamoorthy', 25000.00),
+(1002, 'Anand R', 15000.00),
+(1003, 'Suresh M', 8000.00),
+(1004, 'Priya S', 45000.00),
+(1005, 'Rahul V', 12000.00);
 
-# 2. Read complete file using read()
-print("\n--> Reading complete file using read():")
-file_ref1 = open("student.txt", "r")
-entire_content = file_ref1.read()
-print(entire_content)
-file_ref1.close()
+-- Query 1: Display the structural ledger state BEFORE transactions run
+SELECT 'STATE: BEFORE TRANSACTIONS' AS Execution_Status;
+SELECT * FROM bank_accounts;
 
-# 3. Read the first line using readline()
-print("--> Reading the first line using readline():")
-file_ref2 = open("student.txt", "r")
-first_line = file_ref2.readline()
-print(f"Result (Stripped): {first_line.strip()}")
-file_ref2.close()
+-- Begin controlled manual transaction tracking
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 
-# 4. Read all lines into an array list using readlines()
-print("\n--> Reading all lines using readlines():")
-file_ref3 = open("student.txt", "r")
-list_of_lines = file_ref3.readlines()
-print(f"Compiled Lines Array List: {list_of_lines}")
-file_ref3.close()
+-- Deduct ₹1000 from first target account
+UPDATE bank_accounts SET balance = balance - 1000.00 WHERE account_id = 1001;
+-- Credit ₹1000 to second target account
+UPDATE bank_accounts SET balance = balance + 1000.00 WHERE account_id = 1002;
 
-# 5. Document edits inside notes.txt using write() and append mode
-print("\n[System] Constructing notes.txt with 5 baseline entries...")
-notes_write = open("notes.txt", "w")
-notes_write.write("Line #1: Core Systems Engineering Notes\n")
-notes_write.write("Line #2: Transactions trace atomic routines\n")
-notes_write.write("Line #3: Views maintain presentation layers\n")
-notes_write.write("Line #4: Exceptions guard runtime safety boundaries\n")
-notes_write.write("Line #5: Git syncs repository metrics online\n")
-notes_write.close()
+-- Finalize persistent disk changes
+COMMIT;
 
-print("[System] Re-opening notes.txt in append mode to inject 3 extra lines...")
-notes_append = open("notes.txt", "a")
-notes_append.write("Line #6 (Appended): Context managers clear leaks\n")
-notes_append.write("Line #7 (Appended): Rollbacks drop memory changes\n")
-notes_append.write("Line #8 (Appended): Portfolio dashboard layout finalized\n")
-notes_append.close()
+-- Query 2: Display the structural ledger state AFTER COMMIT is executed
+SELECT 'STATE: AFTER COMMIT' AS Execution_Status;
+SELECT * FROM bank_accounts;
 
-# 6. Create a new file exclusively using 'x' mode flags
-log_filename = "fresh_log.txt"
-if os.path.exists(log_filename):
-    os.remove(log_filename)
+-- Begin secondary speculative transaction block
+START TRANSACTION;
 
-print(f"[System] Initializing new trace reference using 'x' mode: {log_filename}")
-fresh_file = open(log_filename, "x")
-fresh_file.write("Exclusive creation tracking log initiated successfully.")
-fresh_file.close()
+-- Attempt multiple experimental balance updates
+UPDATE bank_accounts SET balance = balance + 5000.00 WHERE account_id = 1003;
+UPDATE bank_accounts SET balance = balance - 3000.00 WHERE account_id = 1004;
 
-# 7. Rewrite layout safely using standard 'with open' context managers
-print("\n--> Displaying verified data buffer via 'with open' Context Manager:")
-with open("notes.txt", "r") as safe_file:
-    data_buffer = safe_file.read()
-    print(data_buffer)
+-- Purge memory log modifications and return to the verified state
+ROLLBACK;
+
+-- Query 3: Display the structural ledger state AFTER ROLLBACK is executed
+SELECT 'STATE: AFTER ROLLBACK' AS Execution_Status;
+SELECT * FROM bank_accounts;
+SET AUTOCOMMIT = 1;
 
 
-print("\n==================== PYTHON EXCEPTION HANDLING TASKS ====================\n")
+-- SECTION 2: VIRTUAL ABSTRACT SCHEMA LAYERS (VIEWS)
+DROP TABLE IF EXISTS employees;
 
-# 1. NameError Routine
-print("--- Launching NameError Sandbox Segment ---")
-try:
-    print(undefined_variable_name)
-except NameError as name_error:
-    print(f"Captured Expected NameError: {name_error}")
-finally:
-    print("NameError execution sandbox cleanly exited.\n")
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(100),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2),
+    city VARCHAR(50)
+);
 
-# 2. TypeError Routine
-print("--- Launching TypeError Sandbox Segment ---")
-try:
-    invalid_combination = "Balaji" + 2026
-except TypeError as type_error:
-    print(f"Captured Expected TypeError: {type_error}")
-finally:
-    print("TypeError execution sandbox cleanly exited.\n")
+INSERT INTO employees (emp_id, emp_name, department, salary, city) VALUES
+(101, 'Balaji K', 'Engineering', 65000.00, 'Chennai'),
+(102, 'Anand R', 'Engineering', 52000.00, 'Bangalore'),
+(103, 'Suresh M', 'Data Science', 58000.00, 'Chennai'),
+(104, 'Priya S', 'HR', 41000.00, 'Hyderabad'),
+(105, 'Rahul V', 'Data Science', 62000.00, 'Chennai'),
+(106, 'Vikram N', 'Testing', 48000.00, 'Mumbai'),
+(107, 'Divya K', 'Testing', 32000.00, 'Chennai'),
+(108, 'Arjun B', 'Engineering', 75000.00, 'Pune'),
+(109, 'Deepa R', 'HR', 45000.00, 'Chennai'),
+(110, 'Karthik P', 'Testing', 34000.00, 'Coimbatore');
 
-# 3. ValueError Routine
-print("--- Launching ValueError Sandbox Segment ---")
-try:
-    malformed_integer = int("Stackly_Training")
-except ValueError as value_error:
-    print(f"Captured Expected ValueError: {value_error}")
-finally:
-    print("ValueError execution sandbox cleanly exited.\n")
+-- 1. Create presentation view subset abstract layer
+CREATE VIEW employee_view AS
+SELECT emp_name, department, salary
+FROM employees;
 
-# 4. ZeroDivisionError Routine
-print("--- Launching ZeroDivisionError Sandbox Segment ---")
-try:
-    arithmetic_fault = 100 / 0
-except ZeroDivisionError as zero_div_error:
-    print(f"Captured Expected ZeroDivisionError: {zero_div_error}")
-finally:
-    print("ZeroDivisionError execution sandbox cleanly exited.")
+-- 2. Display all records from the newly initialized virtual view schema
+SELECT 'DISPLAYING PRIMARY CORE VIEW RECORDS' AS View_Status;
+SELECT * FROM employee_view;
+
+-- 3. Replace the structure to map the city attribute columns
+CREATE OR REPLACE VIEW employee_view AS
+SELECT emp_name, department, salary, city
+FROM employees;
+
+-- 4. Display all records from the updated schema view layout
+SELECT 'DISPLAYING REPLACED EXTENDED VIEW RECORDS' AS View_Status;
+SELECT * FROM employee_view;
+
+-- 5. Drop the virtual view allocation from the relational cache
+DROP VIEW employee_view;
