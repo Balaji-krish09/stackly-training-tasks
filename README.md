@@ -20,6 +20,8 @@
 | `task6.sql` | Standalone MySQL Data Aggregation, Grouping & Having Query Suite |
 | `task7.py` | Standalone Python String Engineering & Manipulation Suite |
 | `task7.sql` | Standalone MySQL Nested & Correlated Subquery Engine |
+| `task8.py` | Standalone Python File Sandbox & Exception Control Suite |
+| `task8.sql` | Standalone MySQL Transaction Control Blocks & Views Script |
 
 ---
 
@@ -34,7 +36,7 @@
 - Inserted 10 student records
 - Performed SELECT, UPDATE, DELETE using `WHERE` clause
 - Demonstrated all 4 CRUD operations individually
-- Used all comparison operators: `=` `!=` `>` `<` `>` `<=`
+- Used all comparison operators: `=` `!=` `>` `<` `>=` `<=`
 - Wrote filter queries using `WHERE` clause
 
 ---
@@ -207,6 +209,31 @@
 - Scanned text blocks to map specific substring sequences using sequential structural checks (`find()`, `count()`, `startswith()`, `endswith()`).
 - Validated text type criteria boundaries leveraging system evaluation assertions (`isalpha()`, `isdigit()`, `isalnum()`).
 - Built clean output interfaces using embedded f-strings and control parameters (`\n`, `\t`).
+
+---
+
+## 🗄️ Task 8: MySQL – ACID Transactions & Views Architecture
+
+**Submitted by:** Balaji Krishnamoorthy  
+**Submission Date:** 14/07/2026  
+
+### Topics Covered
+- Designed transactional work structures tracking atomic operations via explicit manual toggles (`SET AUTOCOMMIT = 0`).
+- Validated persistent database writes using operational balance adjustments finalized via disk `COMMIT` operations.
+- Engineered safe data rollback scenarios using buffer cleanups (`ROLLBACK`) to drop uncommitted experimental edits.
+- Documented theoretical definitions of the standard relational database engine **ACID properties** (*Atomicity, Consistency, Isolation, Durability*).
+- Created modular structural sub-schemas using virtual security abstraction frameworks via `CREATE VIEW` and configuration structural replacement commands (`CREATE OR REPLACE VIEW`).
+
+---
+
+## 🐍 Task 8: Python – File Sandbox & Exception Control Systems
+
+### Topics Covered
+- Managed basic non-volatile text pipelines, mapping document parsing modes using read routines (`read()`, `readline()`, `readlines()`).
+- Engineered data generation flows writing records, tracking persistent sequential line updates with `write()`, and appending blocks in append (`a`) mode.
+- Validated distinct file resource tracking patterns using target exclusive item checks via distinct initialization commands (`x` mode).
+- Standardized runtime workflows using context managers (`with open`) to ensure garbage collection routines prevent system memory leaks.
+- Intercepted structural code defects using complete nested exception structures (`try`, `except`, `finally`) to catch critical operational failure bugs (`NameError`, `TypeError`, `ValueError`, `ZeroDivisionError`).
 
 ---
 
